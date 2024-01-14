@@ -13,7 +13,7 @@ function AccountOperations() {
   const {
     loan: currentLoan,
     loanPurpose: currentLoanPurpose,
-    balance,
+
     isLoading,
   } = useSelector((state) => state.account);
 
@@ -22,7 +22,7 @@ function AccountOperations() {
 
     dispatch(deposit(depositAmount, currency));
     setDepositAmount("");
-    setCurrency("");
+    setCurrency("USD");
   }
 
   function handleWithdrawal() {
